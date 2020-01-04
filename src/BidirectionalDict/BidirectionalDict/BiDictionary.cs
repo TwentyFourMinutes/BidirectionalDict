@@ -45,11 +45,11 @@ namespace BidirectionalDict
 		}
 
 		/// <summary>
-		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}".
+		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
 		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryAdd(TFirst first, TSecond second)
 		{
 			if (!_firstToSecond.TryAdd(first, second))
@@ -67,7 +67,7 @@ namespace BidirectionalDict
 		}
 
 		/// <summary>
-		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}". If any of the values already exists, it will be updated.
+		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>. If any of the values already exists, it will be updated.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
 		/// <param name="second">The second value of the pair</param>
@@ -85,10 +85,10 @@ namespace BidirectionalDict
 		}
 
 		/// <summary>
-		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}", by the first value of the pair.
+		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryRemove(TFirst first)
 		{
 			if (!_firstToSecond.Remove(first, out var second))
@@ -102,10 +102,10 @@ namespace BidirectionalDict
 		}
 
 		/// <summary>
-		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}", by the second value of the pair.
+		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
 		/// </summary>
 		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryRemove(TSecond second)
 		{
 			if (!_secondToFirst.Remove(second, out var first))
@@ -119,23 +119,23 @@ namespace BidirectionalDict
 		}
 
 		/// <summary>
-		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"> contains the first value of the value pair.
+		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the first value of the value pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool Contains(TFirst first)
 			=> _firstToSecond.ContainsKey(first);
 
 		/// <summary>
-		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"> contains the second value of the value pair.
+		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the second value of the value pair.
 		/// </summary>
 		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool Contains(TSecond second)
 			=> _secondToFirst.ContainsKey(second);
 
 		/// <summary>
-		/// Clears all value pairs in the <see cref="BiDictionary{TFirst, TSecond}">.
+		/// Clears all value pairs in the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
 		public void Clear()
 		{
@@ -160,32 +160,34 @@ namespace BidirectionalDict
 			=> _secondToFirst[second];
 
 		/// <summary>
-		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}", by the first value of the pair.
+		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
 		/// </summary>
+		/// <param name="first">The first value of the pair</param>
 		/// <param name="second">The first value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryGet(TFirst first, out TSecond second)
 			=> _firstToSecond.TryGetValue(first, out second);
 
 		/// <summary>
-		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}", by the second value of the pair.
+		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
 		/// </summary>
-		/// <param name="first">The second value of the pair</param>
-		/// <returns>Returns <see cref="true"/>, if the operation was successful, otherwise returns <see cref="false"/>.</returns>
+		/// <param name="first">The first value of the pair</param>
+		/// <param name="second">The second value of the pair</param>
+		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryGet(TSecond second, out TFirst first)
 			=> _secondToFirst.TryGetValue(second, out first);
 
 		/// <summary>
 		/// Gets the <see cref="IEnumerator{T}"/> of the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
-		/// <returns>The <see cref="IEnumerator{T}"/> of the <see cref="BiDictionary{TFirst, TSecond}"</returns>
+		/// <returns>The <see cref="IEnumerator{T}"/> of the <see cref="BiDictionary{TFirst, TSecond}"/></returns>
 		public IEnumerator<KeyValuePair<TFirst, TSecond>> GetEnumerator()
 			=> (IEnumerator<KeyValuePair<TFirst, TSecond>>)_firstToSecond;
 
 		/// <summary>
 		/// Gets the <see cref="IEnumerator"/> of the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
-		/// <returns>The <see cref="IEnumerator"/> of the <see cref="BiDictionary{TFirst, TSecond}</returns>
+		/// <returns>The <see cref="IEnumerator"/> of the <see cref="BiDictionary{TFirst, TSecond}"/></returns>
 		IEnumerator IEnumerable.GetEnumerator()
 			=> _firstToSecond.GetEnumerator();
 	}
