@@ -41,7 +41,8 @@ Console.WriteLine(val2); // 0
 
 ## Planned
 
-- Concurrency support
+- Concurrency implementation
+- Readonly implementation
 
 ## Notes
 
