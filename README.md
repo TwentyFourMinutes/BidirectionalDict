@@ -10,7 +10,13 @@ This package brings a basic implementation of a bidirectional Dictionary with it
 
 ## Installation
 
-You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/BidirectionalDict/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/BidirectionalDict/1.0.0.1) website.
+You can either get this package by downloading it from the NuGet Package Manager built in Visual Studio, in the [releases](https://github.com/TwentyFourMinutes/BidirectionalDict/releases) tab or from the official [nuget.org](https://www.nuget.org/packages/BidirectionalDict/1.0.0.1) website. 
+
+Also you can install it via the **P**ackage **M**anager **C**onsole:
+
+```
+Install-Package BidirectionalDict
+```
 
 ### Basic example
 
