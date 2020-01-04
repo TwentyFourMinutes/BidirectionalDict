@@ -4,6 +4,28 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <LangVersion>8</LangVersion>
     <Nullable>enable</Nullable>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/TwentyFourMinutes/BidirectionalDict</RepositoryUrl>
+    <PackageTags>twoway bidirectional dictionary bidirectionaldictionary</PackageTags>
+    <Copyright>Copyright ©2020 Twenty</Copyright>
+    <Description>A simple bidirectional dictionary/collection of value pairs.</Description>
+    <Company>Twenty</Company>
+    <Authors>Twenty</Authors>
+    <Version>1.0.0.1</Version>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>BidirectionalDict</Title>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>BidirectionalDict.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
