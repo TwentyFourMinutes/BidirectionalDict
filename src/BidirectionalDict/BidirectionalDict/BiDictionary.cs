@@ -13,8 +13,9 @@ namespace BidirectionalDict
 												 where TFirst : notnull
 												 where TSecond : notnull
 	{
-		///	<summary>Gets the number of value pairs contained in the <see cref="BiDictionary{TFirst, TSecond}" />.</summary>
-		/// <returns>The number of value pairs contained in the <see cref="BiDictionary{TFirst, TSecond}" />.</returns>
+		/// <inheritdoc/>
+		public bool IsSynced => Count == _secondToFirst.Count;
+
 		/// <inheritdoc/>
 		public int Count => _firstToSecond.Count;
 
