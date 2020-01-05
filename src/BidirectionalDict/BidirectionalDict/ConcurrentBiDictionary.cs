@@ -30,12 +30,12 @@ namespace BidirectionalDict
 			_secondToFirst = new ConcurrentDictionary<TSecond, TFirst>();
 		}
 
-		/// <summary>Initializes a new instance of the <see cref="ConcurrentBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref= "Dictionary{TFirst, TSecond}" /> and uses the default equality comparer for the key type.</summary>
-		/// <param name="dictionary">The <see cref="Dictionary{TFirst, TSecond}" /> whose elements are copied to the new <see cref="ConcurrentBiDictionary{TFirst, TSecond}" />.</param>
-		public ConcurrentBiDictionary(Dictionary<TFirst, TSecond> dictionary)
+		/// <summary>Initializes a new instance of the <see cref="ConcurrentBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref= "IEnumerable{KeyValuePair{TFirst, TSecond}}" /> and uses the default equality comparer for the key type.</summary>
+		/// <param name="dictionary">The <see cref="IEnumerable{KeyValuePair{TFirst, TSecond}}" /> whose elements are copied to the new <see cref="ConcurrentBiDictionary{TFirst, TSecond}" />.</param>
+		public ConcurrentBiDictionary(IEnumerable<KeyValuePair<TFirst, TSecond>> collection)
 		{
-			_firstToSecond = new ConcurrentDictionary<TFirst, TSecond>(dictionary);
-			_secondToFirst = new ConcurrentDictionary<TSecond, TFirst>(dictionary.ToDictionary(k => k.Value, v => v.Key));
+			_firstToSecond = new ConcurrentDictionary<TFirst, TSecond>(collection);
+			_secondToFirst = new ConcurrentDictionary<TSecond, TFirst>(collection.ToDictionary(k => k.Value, v => v.Key));
 		}
 
 		/// <summary>Initializes a new instance of the <see cref="ConcurrentBiDictionary{TFirst, TSecond}" /> class that is empty, has the default initial capacity, and uses the specified <see cref="IEqualityComparer{T}" />.</summary>

@@ -23,12 +23,12 @@ namespace BidirectionalDict
 		private readonly IReadOnlyDictionary<TFirst, TSecond> _firstToSecond;
 		private readonly IReadOnlyDictionary<TSecond, TFirst> _secondToFirst;
 
-		/// <summary>Initializes a new instance of the <see cref="ReadOnlyBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref="Dictionary{TFirst, TSecond}" /> and uses the default equality comparer for the key type.</summary>
-		/// <param name="dictionary">The <see cref="Dictionary{TFirst, TSecond}" /> whose elements are copied to the new <see cref="ReadOnlyBiDictionary{TFirst, TSecond}" />.</param>
-		public ReadOnlyBiDictionary(Dictionary<TFirst, TSecond> dictionary)
+		/// <summary>Initializes a new instance of the <see cref="ReadOnlyBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref= "IEnumerable{KeyValuePair{TFirst, TSecond}}" /> and uses the default equality comparer for the key type.</summary>
+		/// <param name="dictionary">The <see cref="IEnumerable{KeyValuePair{TFirst, TSecond}}" /> whose elements are copied to the new <see cref="ReadOnlyBiDictionary{TFirst, TSecond}" />.</param>
+		public ReadOnlyBiDictionary(IEnumerable<KeyValuePair<TFirst, TSecond>> collection)
 		{
-			_firstToSecond = new ReadOnlyDictionary<TFirst, TSecond>(dictionary);
-			_secondToFirst = new ReadOnlyDictionary<TSecond, TFirst>(dictionary.ToDictionary(k => k.Value, v => v.Key));
+			_firstToSecond = new ReadOnlyDictionary<TFirst, TSecond>(collection.ToDictionary(k => k.Key, v => v.Value));
+			_secondToFirst = new ReadOnlyDictionary<TSecond, TFirst>(collection.ToDictionary(k => k.Value, v => v.Key));
 		}
 
 		/// <inheritdoc/>
