@@ -38,17 +38,13 @@ Console.WriteLine(val2); // 0
 - C# 8.0 ready
 - build upon performance
 - compatible with Newtonsoft.JSON
-
-## Planned
-
-- Concurrency implementation
-- Readonly implementation
+- iterable by foreach
+- read-only implementation
+- concurrent implementation
 
 ## Notes
 
 If you feel like something is not working as intended or you are experiencing issues, feel free to create an issue. Also for feature requests just create an issue. For further information feel free to send me a mail to `office@twenty-four.dev` or message me on Discord `24_minutes#7496`.
-
-
 
 
 
