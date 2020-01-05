@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -182,7 +182,7 @@ namespace BidirectionalDict
 		/// </summary>
 		/// <returns>The <see cref="IEnumerator{T}"/> of the <see cref="BiDictionary{TFirst, TSecond}"/></returns>
 		public IEnumerator<KeyValuePair<TFirst, TSecond>> GetEnumerator()
-			=> (IEnumerator<KeyValuePair<TFirst, TSecond>>)_firstToSecond;
+			=> _firstToSecond.GetEnumerator();
 
 		/// <summary>
 		/// Gets the <see cref="IEnumerator"/> of the <see cref="BiDictionary{TFirst, TSecond}"/>.
