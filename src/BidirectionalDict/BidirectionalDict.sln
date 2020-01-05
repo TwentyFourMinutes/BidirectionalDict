@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BidirectionalDict", "BidirectionalDict\BidirectionalDict.csproj", "{8DCCB119-A4BB-4E6A-9584-47459B29DA85}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BidirectionalDict.Tests", "BidirectionalDict.Tests\BidirectionalDict.Tests.csproj", "{B3A25A33-6B61-44E1-8068-AE0266CC4036}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8DCCB119-A4BB-4E6A-9584-47459B29DA85}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8DCCB119-A4BB-4E6A-9584-47459B29DA85}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8DCCB119-A4BB-4E6A-9584-47459B29DA85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A25A33-6B61-44E1-8068-AE0266CC4036}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A25A33-6B61-44E1-8068-AE0266CC4036}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A25A33-6B61-44E1-8068-AE0266CC4036}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A25A33-6B61-44E1-8068-AE0266CC4036}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
