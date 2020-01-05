@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -47,11 +47,6 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryAdd(TFirst first, TSecond second)
 		{
 			if (!_firstToSecond.TryAdd(first, second))
@@ -69,10 +64,6 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>. If any of the values already exists, it will be updated.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <param name="second">The second value of the pair</param>
 		public void AddOrUpdate(TFirst first, TSecond second)
 		{
 			if (!_firstToSecond.TryAdd(first, second))
@@ -87,10 +78,6 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryRemove(TFirst first)
 		{
 			if (!_firstToSecond.Remove(first, out var second))
@@ -104,10 +91,6 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
-		/// </summary>
-		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryRemove(TSecond second)
 		{
 			if (!_secondToFirst.Remove(second, out var first))
@@ -121,24 +104,14 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the first value of the value pair.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool Contains(TFirst first)
 			=> _firstToSecond.ContainsKey(first);
 
 		/// <inheritdoc/>
-		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the second value of the value pair.
-		/// </summary>
-		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool Contains(TSecond second)
 			=> _secondToFirst.ContainsKey(second);
 
 		/// <inheritdoc/>
-		/// Clears all value pairs in the <see cref="BiDictionary{TFirst, TSecond}"/>.
-		/// </summary>
 		public void Clear()
 		{
 			_secondToFirst.Clear();
@@ -146,36 +119,18 @@ namespace BidirectionalDict
 		}
 
 		/// <inheritdoc/>
-		/// Gets the element by the specified value of the value pair
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <returns>The second value of the pair</returns>
 		public TSecond this[TFirst first]
 			=> _firstToSecond[first];
 
 		/// <inheritdoc/>
-		/// Gets the element by the specified value of the value pair
-		/// </summary>
-		/// <param name="second">The second value of the pair</param>
-		/// <returns>The first value of the pair</returns>
 		public TFirst this[TSecond second]
 			=> _secondToFirst[second];
 
 		/// <inheritdoc/>
-		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <param name="second">The first value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryGet(TFirst first, out TSecond second)
 			=> _firstToSecond.TryGetValue(first, out second);
 
 		/// <inheritdoc/>
-		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
-		/// </summary>
-		/// <param name="first">The first value of the pair</param>
-		/// <param name="second">The second value of the pair</param>
-		/// <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
 		public bool TryGet(TSecond second, out TFirst first)
 			=> _secondToFirst.TryGetValue(second, out first);
 

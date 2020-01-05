@@ -11,15 +11,17 @@
             <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
             <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
         </member>
+        <member name="P:BidirectionalDict.BiDictionary`2.IsSynced">
+            <inheritdoc/>
+        </member>
         <member name="P:BidirectionalDict.BiDictionary`2.Count">
-            <summary>Gets the number of value pairs contained in the <see cref="T:BidirectionalDict.BiDictionary`2" />.</summary>
-            <returns>The number of value pairs contained in the <see cref="T:BidirectionalDict.BiDictionary`2" />.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.#ctor">
             <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that is empty, has the default initial capacity, and uses the default equality comparer for the key type.</summary>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
-            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that contains elements copied from the specified<see cref= "T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that contains elements copied from the specified <see cref= "T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
             <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.BiDictionary`2" />.</param>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0},System.Collections.Generic.IEqualityComparer{`1})">
@@ -28,82 +30,37 @@
             <param name="secondComparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> implementation to use when comparing the first values, or <see langword="null" /> to use the default <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> for the type of the key.</param>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.TryAdd(`0,`1)">
-            <summary>
-            Tries to add new value pair to the <see cref="T:BidirectionalDict.BiDictionary`2"/>.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <param name="second">The second value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.AddOrUpdate(`0,`1)">
-            <summary>
-            Tries to add new value pair to the <see cref="T:BidirectionalDict.BiDictionary`2"/>. If any of the values already exists, it will be updated.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <param name="second">The second value of the pair</param>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.TryRemove(`0)">
-            <summary>
-            Tries to remove a value pair from the <see cref="T:BidirectionalDict.BiDictionary`2"/>, by the first value of the pair.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.TryRemove(`1)">
-            <summary>
-            Tries to remove a value pair from the <see cref="T:BidirectionalDict.BiDictionary`2"/>, by the second value of the pair.
-            </summary>
-            <param name="second">The second value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.Contains(`0)">
-            <summary>
-            Tells if the <see cref="T:BidirectionalDict.BiDictionary`2"/> contains the first value of the value pair.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.Contains(`1)">
-            <summary>
-            Tells if the <see cref="T:BidirectionalDict.BiDictionary`2"/> contains the second value of the value pair.
-            </summary>
-            <param name="second">The second value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.Clear">
-            <summary>
-            Clears all value pairs in the <see cref="T:BidirectionalDict.BiDictionary`2"/>.
-            </summary>
+            <inheritdoc/>
         </member>
         <member name="P:BidirectionalDict.BiDictionary`2.Item(`0)">
-            <summary>
-            Gets the element by the specified value of the value pair
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <returns>The second value of the pair</returns>
+            <inheritdoc/>
         </member>
         <member name="P:BidirectionalDict.BiDictionary`2.Item(`1)">
-            <summary>
-            Gets the element by the specified value of the value pair
-            </summary>
-            <param name="second">The second value of the pair</param>
-            <returns>The first value of the pair</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.TryGet(`0,`1@)">
-            <summary>
-            Tries to get a value of the value pair from the <see cref="T:BidirectionalDict.BiDictionary`2"/>, by the first value of the pair.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <param name="second">The first value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.TryGet(`1,`0@)">
-            <summary>
-            Tries to get a value of the value pair from the <see cref="T:BidirectionalDict.BiDictionary`2"/>, by the second value of the pair.
-            </summary>
-            <param name="first">The first value of the pair</param>
-            <param name="second">The second value of the pair</param>
-            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+            <inheritdoc/>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.GetEnumerator">
             <summary>
@@ -116,6 +73,235 @@
             Gets the <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.BiDictionary`2"/>.
             </summary>
             <returns>The <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.BiDictionary`2"/></returns>
+        </member>
+        <member name="T:BidirectionalDict.ConcurrentBiDictionary`2">
+            <summary>
+            Represents a concurrent version of a bidirectional collection.
+            </summary>
+            <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
+            <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
+        </member>
+        <member name="P:BidirectionalDict.ConcurrentBiDictionary`2.IsSynced">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ConcurrentBiDictionary`2.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that is empty, has the default initial capacity, and uses the default equality comparer for the key type.</summary>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that contains elements copied from the specified <see cref= "T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" />.</param>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0},System.Collections.Generic.IEqualityComparer{`1})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that is empty, has the default initial capacity, and uses the specified <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
+            <param name="firstComparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> implementation to use when comparing the first values, or <see langword="null" /> to use the default <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> for the type of the key.</param>
+            <param name="secondComparer">The <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> implementation to use when comparing the first values, or <see langword="null" /> to use the default <see cref="T:System.Collections.Generic.IEqualityComparer`1" /> for the type of the key.</param>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.TryAdd(`0,`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.GetOrAdd(`0,`1)">
+            <summary>Uses the argument to add a value pair to the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> if the first value does not already exist, or to update a value pair in the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> if the first value already exists.</summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The second value of the pair</param>
+            <returns>The second value for first value. This will be either the existing second value for the first value if the first value is already in the dictionary, or the new second value if the first value was not in the dictionary.</returns>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.GetOrAdd(`1,`0)">
+            <summary>Uses the argument to add a value pair to the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> if the second value does not already exist, or to update a value pair in the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> if the second value already exists.</summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The second value of the pair</param>
+            <returns>The first value for second value. This will be either the existing first value for the second value if the second value is already in the dictionary, or the new first value if the second value was not in the dictionary.</returns>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.AddOrUpdate(`0,`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.TryRemove(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.TryRemove(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.Contains(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.Contains(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.Clear">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ConcurrentBiDictionary`2.Item(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ConcurrentBiDictionary`2.Item(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.TryGet(`0,`1@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.TryGet(`1,`0@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.GetEnumerator">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerator`1"/> of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2"/>.
+            </summary>
+            <returns>The <see cref="T:System.Collections.Generic.IEnumerator`1"/> of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2"/></returns>
+        </member>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2"/>.
+            </summary>
+            <returns>The <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2"/></returns>
+        </member>
+        <member name="T:BidirectionalDict.IBiDictionary`2">
+            <summary>
+            Represents a bidirectional collection of value pairs.
+            </summary>
+            <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
+            <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
+        </member>
+        <member name="M:BidirectionalDict.IBiDictionary`2.TryAdd(`0,`1)">
+            <summary>
+            Tries to add new value pair to the <see cref="T:BidirectionalDict.IBiDictionary`2"/>.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The second value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IBiDictionary`2.AddOrUpdate(`0,`1)">
+            <summary>
+            Tries to add new value pair to the <see cref="T:BidirectionalDict.IBiDictionary`2"/>. If any of the values already exists, it will be updated.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The second value of the pair</param>
+        </member>
+        <member name="M:BidirectionalDict.IBiDictionary`2.TryRemove(`0)">
+            <summary>
+            Tries to remove a value pair from the <see cref="T:BidirectionalDict.IBiDictionary`2"/>, by the first value of the pair.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IBiDictionary`2.TryRemove(`1)">
+            <summary>
+            Tries to remove a value pair from the <see cref="T:BidirectionalDict.IBiDictionary`2"/>, by the second value of the pair.
+            </summary>
+            <param name="second">The second value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IBiDictionary`2.Clear">
+            <summary>
+            Clears all value pairs in the <see cref="T:BidirectionalDict.IBiDictionary`2"/>.
+            </summary>
+        </member>
+        <member name="T:BidirectionalDict.IReadOnlyBiDictionary`2">
+            <summary>
+            Represents a read-only version of a bidirectional collection.
+            </summary>
+            <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
+            <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
+        </member>
+        <member name="P:BidirectionalDict.IReadOnlyBiDictionary`2.IsSynced">
+            <summary>Tells if the inner Dictionaries of the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2" /> are still synced.</summary>
+            <returns>The bool if the inner Dictionaries of the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2" /> are still synced..</returns>
+        </member>
+        <member name="P:BidirectionalDict.IReadOnlyBiDictionary`2.Count">
+            <summary>Gets the number of value pairs contained in the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2" />.</summary>
+            <returns>The number of value pairs contained in the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2" />.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IReadOnlyBiDictionary`2.Contains(`0)">
+            <summary>
+            Tells if the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2"/> contains the first value of the value pair.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IReadOnlyBiDictionary`2.Contains(`1)">
+            <summary>
+            Tells if the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2"/> contains the second value of the value pair.
+            </summary>
+            <param name="second">The second value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="P:BidirectionalDict.IReadOnlyBiDictionary`2.Item(`0)">
+            <summary>
+            Gets the element by the specified value of the value pair
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <returns>The second value of the pair</returns>
+        </member>
+        <member name="P:BidirectionalDict.IReadOnlyBiDictionary`2.Item(`1)">
+            <summary>
+            Gets the element by the specified value of the value pair
+            </summary>
+            <param name="second">The second value of the pair</param>
+            <returns>The first value of the pair</returns>
+        </member>
+        <member name="M:BidirectionalDict.IReadOnlyBiDictionary`2.TryGet(`0,`1@)">
+            <summary>
+            Tries to get a value of the value pair from the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2"/>, by the first value of the pair.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The first value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="M:BidirectionalDict.IReadOnlyBiDictionary`2.TryGet(`1,`0@)">
+            <summary>
+            Tries to get a value of the value pair from the <see cref="T:BidirectionalDict.IReadOnlyBiDictionary`2"/>, by the second value of the pair.
+            </summary>
+            <param name="first">The first value of the pair</param>
+            <param name="second">The second value of the pair</param>
+            <returns>Returns <see langword="true"/>, if the operation was successful, otherwise returns <see langword="false"/>.</returns>
+        </member>
+        <member name="T:BidirectionalDict.ReadOnlyBiDictionary`2">
+            <summary>
+            Represents a read-only version of a bidirectional collection.
+            </summary>
+            <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
+            <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
+        </member>
+        <member name="P:BidirectionalDict.ReadOnlyBiDictionary`2.IsSynced">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ReadOnlyBiDictionary`2.Count">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" /> class that contains elements copied from the specified <see cref="T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
+            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" />.</param>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.Contains(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.Contains(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ReadOnlyBiDictionary`2.Item(`0)">
+            <inheritdoc/>
+        </member>
+        <member name="P:BidirectionalDict.ReadOnlyBiDictionary`2.Item(`1)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.TryGet(`0,`1@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.TryGet(`1,`0@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.GetEnumerator">
+            <summary>
+            Gets the <see cref="T:System.Collections.Generic.IEnumerator`1"/> of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2"/>.
+            </summary>BiDictionary
+            <returns>The <see cref="T:System.Collections.Generic.IEnumerator`1"/> of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2"/></returns>
+        </member>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets the <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2"/>.
+            </summary>
+            <returns>The <see cref="T:System.Collections.IEnumerator"/> of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2"/></returns>
         </member>
     </members>
 </doc>
