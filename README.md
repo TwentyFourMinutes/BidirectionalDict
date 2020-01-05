@@ -44,7 +44,7 @@ Console.WriteLine(val2); // 0
 
 ## Notes
 
-If you feel like something is not working as intended or you are experiencing issues, feel free to create an issue. Also for feature requests just create an issue. For further information feel free to send me a mail to `office@twenty-four.dev` or message me on Discord `24_minutes#7496`.
+If you feel like something is not working as intended or you are experiencing issues, feel free to create an issue. Also for feature requests just create an issue. For further information feel free to send me a [mail](mailto:office@twenty-four.dev) to `office@twenty-four.dev` or message me on Discord `24_minutes#7496`.
 
 
 
