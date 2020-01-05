@@ -11,13 +11,14 @@
     <Description>A simple bidirectional dictionary/collection of value pairs.</Description>
     <Company>Twenty</Company>
     <Authors>Twenty</Authors>
-    <Version>1.0.0.1</Version>
+    <Version>1.0.0.3</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Title>BidirectionalDict</Title>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile>BidirectionalDict.xml</DocumentationFile>
   </PropertyGroup>
 

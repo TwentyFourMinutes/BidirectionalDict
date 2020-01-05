@@ -30,8 +30,8 @@ namespace BidirectionalDict
 			_secondToFirst = new ConcurrentDictionary<TSecond, TFirst>();
 		}
 
-		/// <summary>Initializes a new instance of the <see cref="ConcurrentBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref= "IEnumerable{KeyValuePair{TFirst, TSecond}}" /> and uses the default equality comparer for the key type.</summary>
-		/// <param name="dictionary">The <see cref="IEnumerable{KeyValuePair{TFirst, TSecond}}" /> whose elements are copied to the new <see cref="ConcurrentBiDictionary{TFirst, TSecond}" />.</param>
+		/// <summary>Initializes a new instance of the <see cref="ConcurrentBiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref="IEnumerable{T}" /> and uses the default equality comparer for the key type.</summary>
+		/// <param name="collection">The <see cref="IEnumerable{T}" /> whose elements are copied to the new <see cref="ConcurrentBiDictionary{TFirst, TSecond}" />.</param>
 		public ConcurrentBiDictionary(IEnumerable<KeyValuePair<TFirst, TSecond>> collection)
 		{
 			_firstToSecond = new ConcurrentDictionary<TFirst, TSecond>(collection);

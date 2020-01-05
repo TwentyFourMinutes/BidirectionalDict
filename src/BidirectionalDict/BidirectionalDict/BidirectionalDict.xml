@@ -20,9 +20,9 @@
         <member name="M:BidirectionalDict.BiDictionary`2.#ctor">
             <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that is empty, has the default initial capacity, and uses the default equality comparer for the key type.</summary>
         </member>
-        <member name="M:BidirectionalDict.BiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
-            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that contains elements copied from the specified <see cref= "T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
-            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.BiDictionary`2" />.</param>
+        <member name="M:BidirectionalDict.BiDictionary`2.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that contains elements copied from the specified <see cref="T:System.Collections.Generic.IEnumerable`1" /> and uses the default equality comparer for the key type.</summary>
+            <param name="collection">The <see cref="T:System.Collections.Generic.IEnumerable`1" /> whose elements are copied to the new <see cref="T:BidirectionalDict.BiDictionary`2" />.</param>
         </member>
         <member name="M:BidirectionalDict.BiDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0},System.Collections.Generic.IEqualityComparer{`1})">
             <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.BiDictionary`2" /> class that is empty, has the default initial capacity, and uses the specified <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
@@ -90,9 +90,9 @@
         <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor">
             <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that is empty, has the default initial capacity, and uses the default equality comparer for the key type.</summary>
         </member>
-        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
-            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that contains elements copied from the specified <see cref= "T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
-            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" />.</param>
+        <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that contains elements copied from the specified <see cref="T:System.Collections.Generic.IEnumerable`1" /> and uses the default equality comparer for the key type.</summary>
+            <param name="collection">The <see cref="T:System.Collections.Generic.IEnumerable`1" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" />.</param>
         </member>
         <member name="M:BidirectionalDict.ConcurrentBiDictionary`2.#ctor(System.Collections.Generic.IEqualityComparer{`0},System.Collections.Generic.IEqualityComparer{`1})">
             <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ConcurrentBiDictionary`2" /> class that is empty, has the default initial capacity, and uses the specified <see cref="T:System.Collections.Generic.IEqualityComparer`1" />.</summary>
@@ -269,9 +269,9 @@
         <member name="P:BidirectionalDict.ReadOnlyBiDictionary`2.Count">
             <inheritdoc/>
         </member>
-        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.#ctor(System.Collections.Generic.Dictionary{`0,`1})">
-            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" /> class that contains elements copied from the specified <see cref="T:System.Collections.Generic.Dictionary`2" /> and uses the default equality comparer for the key type.</summary>
-            <param name="dictionary">The <see cref="T:System.Collections.Generic.Dictionary`2" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" />.</param>
+        <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.#ctor(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{`0,`1}})">
+            <summary>Initializes a new instance of the <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" /> class that contains elements copied from the specified <see cref="T:System.Collections.Generic.IEnumerable`1" /> and uses the default equality comparer for the key type.</summary>
+            <param name="collection">The <see cref="T:System.Collections.Generic.IEnumerable`1" /> whose elements are copied to the new <see cref="T:BidirectionalDict.ReadOnlyBiDictionary`2" />.</param>
         </member>
         <member name="M:BidirectionalDict.ReadOnlyBiDictionary`2.Contains(`0)">
             <inheritdoc/>
