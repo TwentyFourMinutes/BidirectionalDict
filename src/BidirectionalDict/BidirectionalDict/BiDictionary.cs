@@ -9,12 +9,13 @@ namespace BidirectionalDict
 	/// </summary>
 	/// <typeparam name="TFirst">The type of the first values in the dictionary.</typeparam>
 	/// <typeparam name="TSecond">The type of the second values in the dictionary.</typeparam>
-	public class BiDictionary<TFirst, TSecond> : IEnumerable<KeyValuePair<TFirst, TSecond>>
-											   where TFirst : notnull
-											   where TSecond : notnull
+	public class BiDictionary<TFirst, TSecond> : IBiDictionary<TFirst, TSecond>
+												 where TFirst : notnull
+												 where TSecond : notnull
 	{
 		///	<summary>Gets the number of value pairs contained in the <see cref="BiDictionary{TFirst, TSecond}" />.</summary>
 		/// <returns>The number of value pairs contained in the <see cref="BiDictionary{TFirst, TSecond}" />.</returns>
+		/// <inheritdoc/>
 		public int Count => _firstToSecond.Count;
 
 		private readonly IDictionary<TFirst, TSecond> _firstToSecond;
@@ -27,7 +28,7 @@ namespace BidirectionalDict
 			_secondToFirst = new Dictionary<TSecond, TFirst>();
 		}
 
-		/// <summary>Initializes a new instance of the <see cref="BiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified<see cref= "Dictionary{TFirst, TSecond}" /> and uses the default equality comparer for the key type.</summary>
+		/// <summary>Initializes a new instance of the <see cref="BiDictionary{TFirst, TSecond}" /> class that contains elements copied from the specified <see cref= "Dictionary{TFirst, TSecond}" /> and uses the default equality comparer for the key type.</summary>
 		/// <param name="dictionary">The <see cref="Dictionary{TFirst, TSecond}" /> whose elements are copied to the new <see cref="BiDictionary{TFirst, TSecond}" />.</param>
 		public BiDictionary(Dictionary<TFirst, TSecond> dictionary)
 		{
@@ -44,7 +45,7 @@ namespace BidirectionalDict
 			_secondToFirst = new Dictionary<TSecond, TFirst>(secondComparer);
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -66,7 +67,7 @@ namespace BidirectionalDict
 			return true;
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to add new value pair to the <see cref="BiDictionary{TFirst, TSecond}"/>. If any of the values already exists, it will be updated.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -84,7 +85,7 @@ namespace BidirectionalDict
 			}
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -101,7 +102,7 @@ namespace BidirectionalDict
 			return true;
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to remove a value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
 		/// </summary>
 		/// <param name="second">The second value of the pair</param>
@@ -118,7 +119,7 @@ namespace BidirectionalDict
 			return true;
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the first value of the value pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -126,7 +127,7 @@ namespace BidirectionalDict
 		public bool Contains(TFirst first)
 			=> _firstToSecond.ContainsKey(first);
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tells if the <see cref="BiDictionary{TFirst, TSecond}"/> contains the second value of the value pair.
 		/// </summary>
 		/// <param name="second">The second value of the pair</param>
@@ -134,7 +135,7 @@ namespace BidirectionalDict
 		public bool Contains(TSecond second)
 			=> _secondToFirst.ContainsKey(second);
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Clears all value pairs in the <see cref="BiDictionary{TFirst, TSecond}"/>.
 		/// </summary>
 		public void Clear()
@@ -143,7 +144,7 @@ namespace BidirectionalDict
 			_firstToSecond.Clear();
 		}
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Gets the element by the specified value of the value pair
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -151,7 +152,7 @@ namespace BidirectionalDict
 		public TSecond this[TFirst first]
 			=> _firstToSecond[first];
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Gets the element by the specified value of the value pair
 		/// </summary>
 		/// <param name="second">The second value of the pair</param>
@@ -159,7 +160,7 @@ namespace BidirectionalDict
 		public TFirst this[TSecond second]
 			=> _secondToFirst[second];
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the first value of the pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
@@ -168,7 +169,7 @@ namespace BidirectionalDict
 		public bool TryGet(TFirst first, out TSecond second)
 			=> _firstToSecond.TryGetValue(first, out second);
 
-		/// <summary>
+		/// <inheritdoc/>
 		/// Tries to get a value of the value pair from the <see cref="BiDictionary{TFirst, TSecond}"/>, by the second value of the pair.
 		/// </summary>
 		/// <param name="first">The first value of the pair</param>
