@@ -8,7 +8,7 @@
     <RepositoryUrl>https://github.com/TwentyFourMinutes/BidirectionalDict</RepositoryUrl>
     <PackageTags>twoway bidirectional dictionary bidirectionaldictionary</PackageTags>
     <Copyright>Copyright ©2020 Twenty</Copyright>
-    <Description>A simple bidirectional dictionary/collection of value pairs.</Description>
+    <Description>Provides implementations of bidirectional dictionaries.</Description>
     <Company>Twenty</Company>
     <Authors>Twenty</Authors>
     <Version>1.0.0.3</Version>
