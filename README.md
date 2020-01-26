@@ -1,6 +1,6 @@
 # BidirectionalDict
 
-<img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/BidirectionalDict?style=flat-square"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/TwentyFourMinutes/BidirectionalDict?include_prereleases&style=flat-square"> ![GitHub](https://img.shields.io/github/license/TwentyFourMinutes/BidirectionalDict?style=flat-square)
+![Nuget](https://img.shields.io/nuget/dt/BidirectionalDict)<img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/TwentyFourMinutes/BidirectionalDict?style=flat-square"> <img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/TwentyFourMinutes/BidirectionalDict?include_prereleases&style=flat-square"> ![GitHub](https://img.shields.io/github/license/TwentyFourMinutes/BidirectionalDict?style=flat-square)
 
 Provides simple implementations of bidirectional Dictionaries for C#. BidirectionalDict targets .Net Standard so it's available to you for .Net Core and .Net Framework.
 
@@ -50,3 +50,4 @@ If you feel like something is not working as intended or you are experiencing is
 
 
 
+sh
