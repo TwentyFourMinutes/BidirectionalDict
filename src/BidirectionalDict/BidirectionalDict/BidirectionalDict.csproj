@@ -10,7 +10,7 @@
     <Description>Provides implementations of bidirectional dictionaries.</Description>
     <Company>Twenty</Company>
     <Authors>Twenty</Authors>
-    <Version>1.0.0.3</Version>
+    <Version>1.0.0.4</Version>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
