@@ -16,6 +16,8 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Title>BidirectionalDict</Title>
 		<TargetFrameworks>netstandard2.1;netcoreapp3.1;net48;</TargetFrameworks>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>Twenty.pfx</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
