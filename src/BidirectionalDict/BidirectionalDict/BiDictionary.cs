@@ -33,7 +33,11 @@ namespace BidirectionalDict
 		/// <param name="collection">The <see cref="IEnumerable{T}" /> whose elements are copied to the new <see cref="BiDictionary{TFirst, TSecond}" />.</param>
 		public BiDictionary(IEnumerable<KeyValuePair<TFirst, TSecond>> collection)
 		{
+#if NETCOREAPP3_1 || NETSTANDARD2_1
 			_firstToSecond = new Dictionary<TFirst, TSecond>(collection);
+#elif NET48
+			_firstToSecond = new Dictionary<TFirst, TSecond>(collection.ToDictionary(x => x.Key, x => x.Value));
+#endif
 			_secondToFirst = new Dictionary<TSecond, TFirst>(collection.ToDictionary(k => k.Value, v => v.Key));
 		}
 
@@ -49,6 +53,7 @@ namespace BidirectionalDict
 		/// <inheritdoc/>
 		public bool TryAdd(TFirst first, TSecond second)
 		{
+#if NETCOREAPP3_1 || NETSTANDARD2_1
 			if (!_firstToSecond.TryAdd(first, second))
 			{
 				return false;
@@ -59,13 +64,23 @@ namespace BidirectionalDict
 				_firstToSecond.Remove(first);
 				return false;
 			}
+#elif NET48
+			if (_firstToSecond.ContainsKey(first) ||
+				_secondToFirst.ContainsKey(second))
+			{
+				return false;
+			}
 
+			_firstToSecond.Add(first, second);
+			_secondToFirst.Add(second, first);
+#endif
 			return true;
 		}
 
 		/// <inheritdoc/>
 		public void AddOrUpdate(TFirst first, TSecond second)
 		{
+#if NETCOREAPP3_1 || NETSTANDARD2_1
 			if (!_firstToSecond.TryAdd(first, second))
 			{
 				_firstToSecond[first] = second;
@@ -75,15 +90,35 @@ namespace BidirectionalDict
 			{
 				_secondToFirst[second] = first;
 			}
+#elif NET48
+			if (!_firstToSecond.ContainsKey(first))
+			{
+				_firstToSecond[first] = second;
+			}
+
+			if (!_secondToFirst.ContainsKey(second))
+			{
+				_secondToFirst[second] = first;
+			}
+#endif
 		}
 
 		/// <inheritdoc/>
 		public bool TryRemove(TFirst first)
 		{
+#if NETCOREAPP3_1 || NETSTANDARD2_1
 			if (!_firstToSecond.Remove(first, out var second))
 			{
 				return false;
 			}
+#elif NET48
+			var second = _firstToSecond[first];
+
+			if (!_firstToSecond.Remove(first))
+			{
+				return false;
+			}
+#endif
 
 			_secondToFirst.Remove(second);
 
@@ -93,10 +128,19 @@ namespace BidirectionalDict
 		/// <inheritdoc/>
 		public bool TryRemove(TSecond second)
 		{
+#if NETCOREAPP3_1 || NETSTANDARD2_1
 			if (!_secondToFirst.Remove(second, out var first))
 			{
 				return false;
 			}
+#elif NET48
+			var first = _secondToFirst[second];
+
+			if (!_secondToFirst.Remove(second))
+			{
+				return false;
+			}
+#endif
 
 			_firstToSecond.Remove(first);
 

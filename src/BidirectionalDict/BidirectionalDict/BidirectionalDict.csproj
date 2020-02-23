@@ -1,32 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <LangVersion>8</LangVersion>
-    <Nullable>enable</Nullable>
-    <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <RepositoryUrl>https://github.com/TwentyFourMinutes/BidirectionalDict</RepositoryUrl>
-    <PackageTags>twoway bidirectional dictionary bidirectionaldictionary</PackageTags>
-    <Copyright>Copyright ©2020 Twenty</Copyright>
-    <Description>Provides implementations of bidirectional dictionaries.</Description>
-    <Company>Twenty</Company>
-    <Authors>Twenty</Authors>
-    <Version>1.0.0.4</Version>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Title>BidirectionalDict</Title>
-    <TargetFrameworks>netstandard2.1;netcoreapp3.1</TargetFrameworks>
-  </PropertyGroup>
+	<PropertyGroup>
+		<LangVersion>8</LangVersion>
+		<Nullable>enable</Nullable>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<RepositoryUrl>https://github.com/TwentyFourMinutes/BidirectionalDict</RepositoryUrl>
+		<PackageTags>twoway bidirectional dictionary bidirectionaldictionary</PackageTags>
+		<Copyright>Copyright ©2020 Twenty</Copyright>
+		<Description>Provides implementations of bidirectional dictionaries.</Description>
+		<Company>Twenty</Company>
+		<Authors>Twenty</Authors>
+		<Version>1.1.0</Version>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<Title>BidirectionalDict</Title>
+		<TargetFrameworks>netstandard2.1;netcoreapp3.1;net48;</TargetFrameworks>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>BidirectionalDict.xml</DocumentationFile>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<DocumentationFile>BidirectionalDict.xml</DocumentationFile>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\..\LICENSE">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
